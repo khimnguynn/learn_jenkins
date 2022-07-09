@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Requests API'
+    return 'Requests API v2'
 
 
 @app.route("/ip=<ip>")
@@ -22,7 +22,7 @@ def check_geo_ip(ip):
 
 @app.route('/login')
 def login():
-    return 'have nothing v2'
+    return 'have nothing v3'
 
 
 if __name__ == '__main__':
