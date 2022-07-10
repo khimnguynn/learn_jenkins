@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from requests import Session
 
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Requests API v2'
+    return render_template("index.html")
 
 
 @app.route("/ip=<ip>")
@@ -24,6 +24,13 @@ def check_geo_ip(ip):
 def login():
     return 'have nothing v3'
 
+
+@app.route('/redirect')
+def redirect():
+    return render_template("redirect.html")
+
+
+# git 'https://github.com/khimnguynn/learn_jenkins.git'
 
 
 if __name__ == '__main__':
